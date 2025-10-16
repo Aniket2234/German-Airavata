@@ -15,7 +15,11 @@ export function Services() {
             const cards = entry.target.querySelectorAll("[data-service-card]");
             cards.forEach((card, index) => {
               setTimeout(() => {
-                setVisibleCards((prev) => new Set([...prev, index]));
+                setVisibleCards((prev) => {
+                  const newSet = new Set(prev);
+                  newSet.add(index);
+                  return newSet;
+                });
               }, index * 100);
             });
             observer.unobserve(entry.target);
