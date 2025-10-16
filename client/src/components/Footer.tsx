@@ -38,7 +38,7 @@ export function Footer() {
               <li>
                 <button
                   onClick={() => scrollToSection("about")}
-                  className="text-sm text-muted-foreground hover:text-[hsl(var(--cyber-green))] transition-colors duration-200"
+                  className="text-sm text-muted-foreground hover:text-[hsl(var(--cyber-green))] transition-all duration-300 hover:translate-x-1"
                   data-testid="link-footer-about"
                 >
                   {t("footer_company_about")}
@@ -47,7 +47,7 @@ export function Footer() {
               <li>
                 <button
                   onClick={() => scrollToSection("services")}
-                  className="text-sm text-muted-foreground hover:text-[hsl(var(--cyber-green))] transition-colors duration-200"
+                  className="text-sm text-muted-foreground hover:text-[hsl(var(--cyber-green))] transition-all duration-300 hover:translate-x-1"
                   data-testid="link-footer-services"
                 >
                   {t("footer_company_services")}
@@ -55,11 +55,11 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="#careers"
-                  className="text-sm text-muted-foreground hover:text-[hsl(var(--cyber-green))] transition-colors duration-200"
-                  data-testid="link-footer-careers"
+                  href="#products"
+                  className="text-sm text-muted-foreground hover:text-[hsl(var(--cyber-green))] transition-all duration-300 hover:translate-x-1"
+                  data-testid="link-footer-products"
                 >
-                  {t("footer_company_careers")}
+                  {t("footer_company_products")}
                 </a>
               </li>
             </ul>
@@ -74,7 +74,7 @@ export function Footer() {
               <li>
                 <a
                   href="mailto:info@airavata-tech.com"
-                  className="text-sm text-muted-foreground hover:text-[hsl(var(--cyber-green))] transition-colors duration-200"
+                  className="text-sm text-muted-foreground hover:text-[hsl(var(--cyber-green))] transition-all duration-300 hover:translate-x-1"
                   data-testid="link-footer-email"
                 >
                   {t("footer_contact_email")}
@@ -83,7 +83,7 @@ export function Footer() {
               <li>
                 <a
                   href="tel:+491234567890"
-                  className="text-sm text-muted-foreground hover:text-[hsl(var(--cyber-green))] transition-colors duration-200"
+                  className="text-sm text-muted-foreground hover:text-[hsl(var(--cyber-green))] transition-all duration-300 hover:translate-x-1"
                   data-testid="link-footer-phone"
                 >
                   {t("footer_contact_phone")}
@@ -107,26 +107,26 @@ export function Footer() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg bg-muted/50 border border-border flex items-center justify-center hover-elevate transition-all duration-300 hover:border-[hsl(var(--cyber-green))]/50"
+                className="w-10 h-10 rounded-lg bg-muted/50 border border-border flex items-center justify-center hover-elevate transition-all duration-300 hover:border-[hsl(var(--cyber-green))]/50 hover:scale-110 hover:rotate-6"
                 data-testid="link-footer-linkedin"
               >
-                <Linkedin className="h-5 w-5 text-muted-foreground" />
+                <Linkedin className="h-5 w-5 text-muted-foreground transition-colors duration-300" />
               </a>
               <a
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg bg-muted/50 border border-border flex items-center justify-center hover-elevate transition-all duration-300 hover:border-[hsl(var(--cyber-green))]/50"
+                className="w-10 h-10 rounded-lg bg-muted/50 border border-border flex items-center justify-center hover-elevate transition-all duration-300 hover:border-[hsl(var(--cyber-green))]/50 hover:scale-110 hover:rotate-6"
                 data-testid="link-footer-github"
               >
-                <Github className="h-5 w-5 text-muted-foreground" />
+                <Github className="h-5 w-5 text-muted-foreground transition-colors duration-300" />
               </a>
               <a
                 href="mailto:info@airavata-tech.com"
-                className="w-10 h-10 rounded-lg bg-muted/50 border border-border flex items-center justify-center hover-elevate transition-all duration-300 hover:border-[hsl(var(--cyber-green))]/50"
+                className="w-10 h-10 rounded-lg bg-muted/50 border border-border flex items-center justify-center hover-elevate transition-all duration-300 hover:border-[hsl(var(--cyber-green))]/50 hover:scale-110 hover:rotate-6"
                 data-testid="link-footer-email-icon"
               >
-                <Mail className="h-5 w-5 text-muted-foreground" />
+                <Mail className="h-5 w-5 text-muted-foreground transition-colors duration-300" />
               </a>
             </div>
           </div>
@@ -141,14 +141,14 @@ export function Footer() {
             <div className="flex gap-6">
               <a
                 href="#privacy"
-                className="text-sm text-muted-foreground hover:text-[hsl(var(--cyber-green))] transition-colors duration-200"
+                className="text-sm text-muted-foreground hover:text-[hsl(var(--cyber-green))] transition-all duration-300 hover:scale-105"
                 data-testid="link-footer-privacy"
               >
                 {t("footer_privacy")}
               </a>
               <a
                 href="#terms"
-                className="text-sm text-muted-foreground hover:text-[hsl(var(--cyber-green))] transition-colors duration-200"
+                className="text-sm text-muted-foreground hover:text-[hsl(var(--cyber-green))] transition-all duration-300 hover:scale-105"
                 data-testid="link-footer-terms"
               >
                 {t("footer_terms")}

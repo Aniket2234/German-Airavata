@@ -80,24 +80,17 @@ export function Header() {
             </Button>
           </nav>
 
-          {/* Language Toggle + CTA */}
+          {/* Language Toggle */}
           <div className="hidden md:flex items-center gap-3">
             <Button
               variant="outline"
               size="sm"
               onClick={toggleLanguage}
-              className="gap-2 font-medium"
+              className="gap-2 font-medium transition-all duration-300 hover:scale-105"
               data-testid="button-language-toggle"
             >
               <span className="text-lg">{language === "de" ? "🇩🇪" : "🇬🇧"}</span>
               <span>{language.toUpperCase()}</span>
-            </Button>
-            <Button
-              onClick={() => scrollToSection("contact")}
-              className="bg-[hsl(var(--cyber-green))] hover:bg-[hsl(var(--cyber-green))] text-white font-semibold border border-[hsl(var(--cyber-green))]"
-              data-testid="button-nav-cta"
-            >
-              {t("nav_cta")}
             </Button>
           </div>
 
@@ -151,13 +144,6 @@ export function Header() {
               data-testid="button-mobile-nav-contact"
             >
               {t("nav_contact")}
-            </Button>
-            <Button
-              onClick={() => scrollToSection("contact")}
-              className="mt-4 bg-[hsl(var(--cyber-green))] hover:bg-[hsl(var(--cyber-green))] text-white font-semibold border border-[hsl(var(--cyber-green))]"
-              data-testid="button-mobile-nav-cta"
-            >
-              {t("nav_cta")}
             </Button>
           </nav>
         </div>

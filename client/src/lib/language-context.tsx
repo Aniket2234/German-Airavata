@@ -52,7 +52,7 @@ const translations = {
     footer_company: "Unternehmen",
     footer_company_about: "Über Uns",
     footer_company_services: "Dienstleistungen",
-    footer_company_careers: "Karriere",
+    footer_company_products: "Produkte",
     
     footer_contact: "Kontakt",
     footer_contact_email: "info@airavata-tech.com",
@@ -122,12 +122,12 @@ const translations = {
     footer_company: "Company",
     footer_company_about: "About Us",
     footer_company_services: "Services",
-    footer_company_careers: "Careers",
+    footer_company_products: "Products",
     
     footer_contact: "Contact",
     footer_contact_email: "info@airavata-tech.com",
     footer_contact_phone: "+49 123 456 7890",
-    footer_contact_address: "Musterstraße 123, 10115 Berlin",
+    footer_contact_address: "Sample Street 123, 10115 Berlin",
     
     footer_social: "Follow Us",
     footer_copyright: "© 2025 AIRAVATA TECHNOLOGIES. All rights reserved.",
