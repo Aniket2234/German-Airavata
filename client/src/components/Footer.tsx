@@ -1,15 +1,9 @@
 import { useLanguage } from "@/lib/language-context";
 import { Github, Linkedin, Mail } from "lucide-react";
+import { Link } from "wouter";
 
 export function Footer() {
   const { t } = useLanguage();
-
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
 
   return (
     <footer id="contact" className="relative bg-card border-t border-card-border">
@@ -36,31 +30,25 @@ export function Footer() {
             </h3>
             <ul className="space-y-3">
               <li>
-                <button
-                  onClick={() => scrollToSection("about")}
-                  className="text-sm text-muted-foreground hover:text-[hsl(var(--cyber-green))] transition-all duration-300 hover:translate-x-1"
-                  data-testid="link-footer-about"
-                >
-                  {t("footer_company_about")}
-                </button>
+                <Link href="/about">
+                  <a className="text-sm text-muted-foreground hover:text-[hsl(var(--cyber-green))] transition-all duration-300 hover:translate-x-1">
+                    {t("footer_company_about")}
+                  </a>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => scrollToSection("services")}
-                  className="text-sm text-muted-foreground hover:text-[hsl(var(--cyber-green))] transition-all duration-300 hover:translate-x-1"
-                  data-testid="link-footer-services"
-                >
-                  {t("footer_company_services")}
-                </button>
+                <Link href="/services">
+                  <a className="text-sm text-muted-foreground hover:text-[hsl(var(--cyber-green))] transition-all duration-300 hover:translate-x-1">
+                    {t("footer_company_services")}
+                  </a>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => scrollToSection("products")}
-                  className="text-sm text-muted-foreground hover:text-[hsl(var(--cyber-green))] transition-all duration-300 hover:translate-x-1"
-                  data-testid="link-footer-products"
-                >
-                  {t("footer_company_products")}
-                </button>
+                <Link href="/portfolio">
+                  <a className="text-sm text-muted-foreground hover:text-[hsl(var(--cyber-green))] transition-all duration-300 hover:translate-x-1">
+                    {t("nav_portfolio")}
+                  </a>
+                </Link>
               </li>
             </ul>
           </div>

@@ -1,24 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { useLanguage } from "@/lib/language-context";
+import { Link } from "wouter";
 import heroImage from "@assets/generated_images/Tech_innovation_hero_background_62bbdf8e.png";
 
 export function Hero() {
   const { t } = useLanguage();
-
-  const scrollToContact = () => {
-    const element = document.getElementById("contact");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
-
-  const scrollToAbout = () => {
-    const element = document.getElementById("about");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
 
   return (
     <section
@@ -77,24 +64,28 @@ export function Hero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
-              <Button
-                size="lg"
-                onClick={scrollToContact}
-                className="w-full sm:w-auto bg-[hsl(var(--cyber-green))] hover:bg-[hsl(var(--cyber-green))] text-white font-semibold text-sm sm:text-base border border-[hsl(var(--cyber-green))] shadow-lg shadow-[hsl(var(--cyber-green))]/20 transition-all duration-300 hover:scale-105 min-h-[44px]"
-                data-testid="button-hero-cta-primary"
-              >
-                {t("hero_cta_primary")}
-                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                onClick={scrollToAbout}
-                className="w-full sm:w-auto text-sm sm:text-base font-semibold backdrop-blur-sm bg-background/50 hover:bg-background/80 border-2 min-h-[44px]"
-                data-testid="button-hero-cta-secondary"
-              >
-                {t("hero_cta_secondary")}
-              </Button>
+              <Link href="/contact">
+                <a>
+                  <Button
+                    size="lg"
+                    className="w-full sm:w-auto bg-[hsl(var(--cyber-green))] hover:bg-[hsl(var(--cyber-green))] text-white font-semibold text-sm sm:text-base border border-[hsl(var(--cyber-green))] shadow-lg shadow-[hsl(var(--cyber-green))]/20 transition-all duration-300 hover:scale-105 min-h-[44px]"
+                  >
+                    {t("hero_cta_primary")}
+                    <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+                  </Button>
+                </a>
+              </Link>
+              <Link href="/about">
+                <a>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="w-full sm:w-auto text-sm sm:text-base font-semibold backdrop-blur-sm bg-background/50 hover:bg-background/80 border-2 min-h-[44px]"
+                  >
+                    {t("hero_cta_secondary")}
+                  </Button>
+                </a>
+              </Link>
             </div>
           </div>
 

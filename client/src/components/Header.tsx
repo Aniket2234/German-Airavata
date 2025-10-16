@@ -2,11 +2,13 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/lib/language-context";
+import { Link, useLocation } from "wouter";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { language, setLanguage, t } = useLanguage();
+  const [location] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,16 +17,6 @@ export function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const scrollToSection = (id: string) => {
-    setIsMobileMenuOpen(false);
-    setTimeout(() => {
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    }, 100);
-  };
 
   const toggleLanguage = () => {
     setLanguage(language === "de" ? "en" : "de");
@@ -41,43 +33,77 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <button
-            onClick={() => scrollToSection("home")}
-            className="flex items-center gap-2 hover-elevate rounded-md px-3 py-2 transition-all duration-300 group"
-            data-testid="link-home"
-          >
-            <div className="text-2xl font-bold font-mono tracking-tight">
-              <span className="bg-gradient-to-r from-[hsl(var(--cyber-green))] via-[hsl(var(--electric-blue))] to-[hsl(var(--cyber-green))] bg-clip-text text-transparent animate-gradient-shift">AIRAVATA</span>{" "}
-              <span className="text-foreground dark:text-white">TECH</span>
-            </div>
-          </button>
+          <Link href="/">
+            <a className="flex items-center gap-2 hover-elevate rounded-md px-3 py-2 transition-all duration-300 group">
+              <div className="text-2xl font-bold font-mono tracking-tight">
+                <span className="bg-gradient-to-r from-[hsl(var(--cyber-green))] via-[hsl(var(--electric-blue))] to-[hsl(var(--cyber-green))] bg-clip-text text-transparent animate-gradient-shift">AIRAVATA</span>{" "}
+                <span className="text-foreground dark:text-white">TECH</span>
+              </div>
+            </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-1">
-            <Button
-              variant="ghost"
-              onClick={() => scrollToSection("home")}
-              className="text-base text-foreground dark:text-white hover:text-[hsl(var(--cyber-green))] transition-all duration-300"
-              data-testid="button-nav-home"
-            >
-              {t("nav_home")}
-            </Button>
-            <Button
-              variant="ghost"
-              onClick={() => scrollToSection("about")}
-              className="text-base text-foreground dark:text-white hover:text-[hsl(var(--cyber-green))] transition-all duration-300"
-              data-testid="button-nav-about"
-            >
-              {t("nav_about")}
-            </Button>
-            <Button
-              variant="ghost"
-              onClick={() => scrollToSection("contact")}
-              className="text-base text-foreground dark:text-white hover:text-[hsl(var(--cyber-green))] transition-all duration-300"
-              data-testid="button-nav-contact"
-            >
-              {t("nav_contact")}
-            </Button>
+            <Link href="/">
+              <a>
+                <Button
+                  variant="ghost"
+                  className={`text-base hover:text-[hsl(var(--cyber-green))] transition-all duration-300 ${
+                    location === "/" ? "text-[hsl(var(--cyber-green))]" : "text-foreground dark:text-white"
+                  }`}
+                >
+                  {t("nav_home")}
+                </Button>
+              </a>
+            </Link>
+            <Link href="/about">
+              <a>
+                <Button
+                  variant="ghost"
+                  className={`text-base hover:text-[hsl(var(--cyber-green))] transition-all duration-300 ${
+                    location === "/about" ? "text-[hsl(var(--cyber-green))]" : "text-foreground dark:text-white"
+                  }`}
+                >
+                  {t("nav_about")}
+                </Button>
+              </a>
+            </Link>
+            <Link href="/services">
+              <a>
+                <Button
+                  variant="ghost"
+                  className={`text-base hover:text-[hsl(var(--cyber-green))] transition-all duration-300 ${
+                    location === "/services" ? "text-[hsl(var(--cyber-green))]" : "text-foreground dark:text-white"
+                  }`}
+                >
+                  {t("nav_services")}
+                </Button>
+              </a>
+            </Link>
+            <Link href="/portfolio">
+              <a>
+                <Button
+                  variant="ghost"
+                  className={`text-base hover:text-[hsl(var(--cyber-green))] transition-all duration-300 ${
+                    location === "/portfolio" ? "text-[hsl(var(--cyber-green))]" : "text-foreground dark:text-white"
+                  }`}
+                >
+                  {t("nav_portfolio")}
+                </Button>
+              </a>
+            </Link>
+            <Link href="/contact">
+              <a>
+                <Button
+                  variant="ghost"
+                  className={`text-base hover:text-[hsl(var(--cyber-green))] transition-all duration-300 ${
+                    location === "/contact" ? "text-[hsl(var(--cyber-green))]" : "text-foreground dark:text-white"
+                  }`}
+                >
+                  {t("nav_contact")}
+                </Button>
+              </a>
+            </Link>
           </nav>
 
           {/* Language Toggle */}
@@ -121,30 +147,41 @@ export function Header() {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-background border-t border-border shadow-lg">
           <nav className="flex flex-col p-6 gap-2">
-            <Button
-              variant="ghost"
-              onClick={() => scrollToSection("home")}
-              className="justify-start text-base"
-              data-testid="button-mobile-nav-home"
-            >
-              {t("nav_home")}
-            </Button>
-            <Button
-              variant="ghost"
-              onClick={() => scrollToSection("about")}
-              className="justify-start text-base"
-              data-testid="button-mobile-nav-about"
-            >
-              {t("nav_about")}
-            </Button>
-            <Button
-              variant="ghost"
-              onClick={() => scrollToSection("contact")}
-              className="justify-start text-base"
-              data-testid="button-mobile-nav-contact"
-            >
-              {t("nav_contact")}
-            </Button>
+            <Link href="/">
+              <a onClick={() => setIsMobileMenuOpen(false)}>
+                <Button variant="ghost" className="justify-start text-base w-full">
+                  {t("nav_home")}
+                </Button>
+              </a>
+            </Link>
+            <Link href="/about">
+              <a onClick={() => setIsMobileMenuOpen(false)}>
+                <Button variant="ghost" className="justify-start text-base w-full">
+                  {t("nav_about")}
+                </Button>
+              </a>
+            </Link>
+            <Link href="/services">
+              <a onClick={() => setIsMobileMenuOpen(false)}>
+                <Button variant="ghost" className="justify-start text-base w-full">
+                  {t("nav_services")}
+                </Button>
+              </a>
+            </Link>
+            <Link href="/portfolio">
+              <a onClick={() => setIsMobileMenuOpen(false)}>
+                <Button variant="ghost" className="justify-start text-base w-full">
+                  {t("nav_portfolio")}
+                </Button>
+              </a>
+            </Link>
+            <Link href="/contact">
+              <a onClick={() => setIsMobileMenuOpen(false)}>
+                <Button variant="ghost" className="justify-start text-base w-full">
+                  {t("nav_contact")}
+                </Button>
+              </a>
+            </Link>
           </nav>
         </div>
       )}
