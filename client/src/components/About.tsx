@@ -1,0 +1,115 @@
+import { useLanguage } from "@/lib/language-context";
+import { CheckCircle2, Users, Award, Clock } from "lucide-react";
+
+export function About() {
+  const { t } = useLanguage();
+
+  return (
+    <section id="about" className="relative py-24 lg:py-32 bg-muted/30">
+      {/* Subtle Grid Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `linear-gradient(hsl(var(--foreground)) 1px, transparent 1px),
+                            linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)`,
+            backgroundSize: "40px 40px",
+          }}
+        />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            {t("about_title")}
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            {t("about_subtitle")}
+          </p>
+        </div>
+
+        {/* Main Content Grid */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left Column - Description */}
+          <div className="space-y-8">
+            <p className="text-lg leading-relaxed text-foreground/90">
+              {t("about_description")}
+            </p>
+
+            {/* Feature List */}
+            <div className="space-y-4">
+              {[
+                { icon: CheckCircle2, key: "about_feature1" },
+                { icon: Users, key: "about_feature2" },
+                { icon: Award, key: "about_feature3" },
+                { icon: Clock, key: "about_feature4" },
+              ].map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <div
+                    key={index}
+                    className="flex items-start gap-4 group hover-elevate rounded-md p-3 transition-all duration-300"
+                  >
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[hsl(var(--cyber-green))]/10 border border-[hsl(var(--cyber-green))]/20 flex items-center justify-center group-hover:bg-[hsl(var(--cyber-green))]/20 transition-all duration-300">
+                      <Icon className="h-5 w-5 text-[hsl(var(--cyber-green))]" />
+                    </div>
+                    <p className="text-base text-foreground/90 pt-2">
+                      {t(item.key)}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Right Column - Stats */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {[
+              {
+                number: t("about_stat1_number"),
+                label: t("about_stat1_label"),
+                color: "cyber-green",
+              },
+              {
+                number: t("about_stat2_number"),
+                label: t("about_stat2_label"),
+                color: "electric-blue",
+              },
+              {
+                number: t("about_stat3_number"),
+                label: t("about_stat3_label"),
+                color: "primary",
+              },
+              {
+                number: t("about_stat4_number"),
+                label: t("about_stat4_label"),
+                color: "cyber-green",
+              },
+            ].map((stat, index) => (
+              <div
+                key={index}
+                className="relative bg-card border border-card-border rounded-lg p-8 hover-elevate transition-all duration-300 group"
+                data-testid={`stat-card-${index}`}
+              >
+                <div className="space-y-2">
+                  <div
+                    className={`text-5xl font-bold bg-gradient-to-br from-[hsl(var(--${stat.color}))] to-[hsl(var(--${stat.color}))]/60 bg-clip-text text-transparent`}
+                  >
+                    {stat.number}
+                  </div>
+                  <div className="text-sm font-medium text-muted-foreground uppercase tracking-wide">
+                    {stat.label}
+                  </div>
+                </div>
+                
+                {/* Subtle Glow Effect */}
+                <div className={`absolute -inset-px bg-gradient-to-br from-[hsl(var(--${stat.color}))]/10 to-transparent rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10`} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
