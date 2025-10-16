@@ -102,9 +102,9 @@ export function Services() {
                   transitionDelay: isVisible ? `${index * 100}ms` : "0ms",
                 }}
               >
-                {/* Icon with Gradient Background */}
+                {/* Icon with Background */}
                 <div className="mb-6">
-                  <div className={`inline-flex p-4 rounded-lg bg-gradient-to-br ${service.gradient} bg-opacity-10`}>
+                  <div className="inline-flex p-4 rounded-lg bg-[hsl(var(--cyber-green))]/10 border border-[hsl(var(--cyber-green))]/20">
                     <Icon className="h-8 w-8 text-[hsl(var(--cyber-green))] group-hover:scale-110 transition-transform duration-300" />
                   </div>
                 </div>
@@ -126,19 +126,14 @@ export function Services() {
                 </div>
 
                 {/* Hover Glow Effect */}
-                <div className={`absolute -inset-px bg-gradient-to-br ${service.gradient} rounded-lg blur-lg opacity-0 group-hover:opacity-20 transition-opacity duration-500 -z-10`} />
-
-                {/* Corner Accent */}
-                <div className="absolute top-0 right-0 w-20 h-20 overflow-hidden rounded-tr-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className={`absolute top-0 right-0 w-full h-full bg-gradient-to-br ${service.gradient} opacity-10 transform rotate-45 translate-x-10 -translate-y-10`} />
-                </div>
+                <div className="absolute -inset-px bg-[hsl(var(--cyber-green))]/10 rounded-lg blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
               </div>
             );
           })}
 
           {/* CTA Card - positioned in the 6th spot */}
           <div
-            className={`group relative bg-gradient-to-br from-[hsl(var(--cyber-green))]/10 via-[hsl(var(--electric-blue))]/10 to-primary/10 border-2 border-dashed border-[hsl(var(--cyber-green))]/30 rounded-lg p-8 flex flex-col items-center justify-center text-center hover-elevate transition-all duration-500 ${
+            className={`group relative bg-card/50 border-2 border-dashed border-[hsl(var(--cyber-green))]/30 rounded-lg p-8 flex flex-col items-center justify-center text-center hover-elevate transition-all duration-500 ${
               visibleCards.size >= 5
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"

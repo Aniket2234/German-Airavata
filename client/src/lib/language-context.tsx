@@ -30,8 +30,8 @@ const translations = {
     about_stat1_label: "Gegründet 2025",
     about_stat2_number: "1.",
     about_stat2_label: "Suchen ersten Kunden",
-    about_stat3_number: "24/7",
-    about_stat3_label: "Support verfügbar",
+    about_stat3_number: "Support",
+    about_stat3_label: "24/7 verfügbar",
     
     services_title: "Unsere Dienstleistungen",
     services_subtitle: "Fokussiert auf Website-Entwicklung & Tech Digitale Produkte",
@@ -109,6 +109,21 @@ const translations = {
     
     footer_privacy: "Datenschutz",
     footer_terms: "AGB",
+    
+    features_title: "Warum mit uns arbeiten?",
+    features_subtitle: "Als neues Startup bieten wir frische Perspektiven und attraktive Konditionen",
+    
+    feature1_title: "Neue Energie",
+    feature1_description: "Frische Ideen und moderne Ansätze für Ihr digitales Projekt",
+    
+    feature2_title: "Erste Priorität",
+    feature2_description: "Als unser erster Kunde erhalten Sie besondere Aufmerksamkeit und Engagement",
+    
+    feature3_title: "Faire Preise",
+    feature3_description: "Attraktive Konditionen für unseren ersten Kunden - Qualität muss nicht teuer sein",
+    
+    feature4_title: "Schnelle Umsetzung",
+    feature4_description: "Agile Entwicklung und schnelle Iterationen für Ihr Projekt",
   },
   en: {
     nav_home: "Home",
@@ -131,8 +146,8 @@ const translations = {
     about_stat1_label: "Founded 2025",
     about_stat2_number: "1st",
     about_stat2_label: "Looking for First Client",
-    about_stat3_number: "24/7",
-    about_stat3_label: "Support Available",
+    about_stat3_number: "Support",
+    about_stat3_label: "24/7 Available",
     
     services_title: "Our Services",
     services_subtitle: "Focused on Website Development & Tech Digital Products",
@@ -210,6 +225,21 @@ const translations = {
     
     footer_privacy: "Privacy",
     footer_terms: "Terms",
+    
+    features_title: "Why Work With Us?",
+    features_subtitle: "As a new startup, we offer fresh perspectives and attractive conditions",
+    
+    feature1_title: "Fresh Energy",
+    feature1_description: "New ideas and modern approaches for your digital project",
+    
+    feature2_title: "First Priority",
+    feature2_description: "As our first client, you get special attention and commitment",
+    
+    feature3_title: "Fair Pricing",
+    feature3_description: "Attractive rates for our first client - quality doesn't have to be expensive",
+    
+    feature4_title: "Fast Delivery",
+    feature4_description: "Agile development and quick iterations for your project",
   },
 };
 
