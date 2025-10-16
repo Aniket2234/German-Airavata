@@ -65,26 +65,22 @@ export function Hero() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
               <Link href="/contact">
-                <a>
-                  <Button
-                    size="lg"
-                    className="w-full sm:w-auto bg-[hsl(var(--cyber-green))] hover:bg-[hsl(var(--cyber-green))] text-white font-semibold text-sm sm:text-base border border-[hsl(var(--cyber-green))] shadow-lg shadow-[hsl(var(--cyber-green))]/20 transition-all duration-300 hover:scale-105 min-h-[44px]"
-                  >
-                    {t("hero_cta_primary")}
-                    <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
-                  </Button>
-                </a>
+                <Button
+                  size="lg"
+                  className="w-full sm:w-auto bg-[hsl(var(--cyber-green))] hover:bg-[hsl(var(--cyber-green))] text-white font-semibold text-sm sm:text-base border border-[hsl(var(--cyber-green))] shadow-lg shadow-[hsl(var(--cyber-green))]/20 transition-all duration-300 hover:scale-105 min-h-[44px]"
+                >
+                  {t("hero_cta_primary")}
+                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+                </Button>
               </Link>
               <Link href="/about">
-                <a>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="w-full sm:w-auto text-sm sm:text-base font-semibold backdrop-blur-sm bg-background/50 hover:bg-background/80 border-2 min-h-[44px]"
-                  >
-                    {t("hero_cta_secondary")}
-                  </Button>
-                </a>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="w-full sm:w-auto text-sm sm:text-base font-semibold backdrop-blur-sm bg-background/50 hover:bg-background/80 border-2 min-h-[44px]"
+                >
+                  {t("hero_cta_secondary")}
+                </Button>
               </Link>
             </div>
           </div>

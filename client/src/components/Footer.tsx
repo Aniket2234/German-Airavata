@@ -30,24 +30,18 @@ export function Footer() {
             </h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/about">
-                  <a className="text-sm text-muted-foreground hover:text-[hsl(var(--cyber-green))] transition-all duration-300 hover:translate-x-1">
-                    {t("footer_company_about")}
-                  </a>
+                <Link href="/about" className="text-sm text-muted-foreground hover:text-[hsl(var(--cyber-green))] transition-all duration-300 hover:translate-x-1">
+                  {t("footer_company_about")}
                 </Link>
               </li>
               <li>
-                <Link href="/services">
-                  <a className="text-sm text-muted-foreground hover:text-[hsl(var(--cyber-green))] transition-all duration-300 hover:translate-x-1">
-                    {t("footer_company_services")}
-                  </a>
+                <Link href="/services" className="text-sm text-muted-foreground hover:text-[hsl(var(--cyber-green))] transition-all duration-300 hover:translate-x-1">
+                  {t("footer_company_services")}
                 </Link>
               </li>
               <li>
-                <Link href="/portfolio">
-                  <a className="text-sm text-muted-foreground hover:text-[hsl(var(--cyber-green))] transition-all duration-300 hover:translate-x-1">
-                    {t("nav_portfolio")}
-                  </a>
+                <Link href="/portfolio" className="text-sm text-muted-foreground hover:text-[hsl(var(--cyber-green))] transition-all duration-300 hover:translate-x-1">
+                  {t("nav_portfolio")}
                 </Link>
               </li>
             </ul>
