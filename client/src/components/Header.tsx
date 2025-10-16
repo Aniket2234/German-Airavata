@@ -17,11 +17,13 @@ export function Header() {
   }, []);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-      setIsMobileMenuOpen(false);
-    }
+    setIsMobileMenuOpen(false);
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 100);
   };
 
   const toggleLanguage = () => {
