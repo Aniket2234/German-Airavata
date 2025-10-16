@@ -13,8 +13,8 @@ export function Footer() {
 
   return (
     <footer id="contact" className="relative bg-card border-t border-card-border">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-20">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-8 mb-8 sm:mb-12">
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center gap-2">

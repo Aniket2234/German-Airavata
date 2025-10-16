@@ -49,20 +49,20 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 lg:py-40">
-        <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 md:py-32 lg:py-40">
+        <div className="grid lg:grid-cols-5 gap-8 sm:gap-10 lg:gap-16 items-center">
           {/* Left Column - Text Content */}
-          <div className="lg:col-span-3 space-y-8 animate-fade-in">
+          <div className="lg:col-span-3 space-y-6 sm:space-y-8 animate-fade-in">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/50 border border-border/50 backdrop-blur-sm animate-pulse-glow">
-              <Sparkles className="h-4 w-4 text-[hsl(var(--cyber-green))] animate-pulse" />
-              <span className="text-sm font-medium text-foreground dark:text-white">
+            <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-card/50 border border-border/50 backdrop-blur-sm animate-pulse-glow">
+              <Sparkles className="h-3 w-3 sm:h-4 sm:w-4 text-[hsl(var(--cyber-green))] animate-pulse" />
+              <span className="text-xs sm:text-sm font-medium text-foreground dark:text-white">
                 {t("hero_subtitle")}
               </span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-tight">
               <span className="text-foreground dark:text-white">{t("hero_title")}</span>
               <br />
               <span className="bg-gradient-to-r from-[hsl(var(--cyber-green))] via-[hsl(var(--electric-blue))] to-[hsl(var(--cyber-green))] bg-clip-text text-transparent animate-gradient-shift">
@@ -71,26 +71,26 @@ export function Hero() {
             </h1>
 
             {/* Description */}
-            <p className="text-lg md:text-xl text-muted-foreground dark:text-gray-300 leading-relaxed max-w-2xl">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground dark:text-gray-300 leading-relaxed max-w-2xl">
               {t("hero_description")}
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
               <Button
                 size="lg"
                 onClick={scrollToContact}
-                className="bg-[hsl(var(--cyber-green))] hover:bg-[hsl(var(--cyber-green))] text-white font-semibold text-base border border-[hsl(var(--cyber-green))] shadow-lg shadow-[hsl(var(--cyber-green))]/20 transition-all duration-300 hover:scale-105"
+                className="w-full sm:w-auto bg-[hsl(var(--cyber-green))] hover:bg-[hsl(var(--cyber-green))] text-white font-semibold text-sm sm:text-base border border-[hsl(var(--cyber-green))] shadow-lg shadow-[hsl(var(--cyber-green))]/20 transition-all duration-300 hover:scale-105 min-h-[44px]"
                 data-testid="button-hero-cta-primary"
               >
                 {t("hero_cta_primary")}
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 onClick={scrollToAbout}
-                className="text-base font-semibold backdrop-blur-sm bg-background/50 hover:bg-background/80 border-2"
+                className="w-full sm:w-auto text-sm sm:text-base font-semibold backdrop-blur-sm bg-background/50 hover:bg-background/80 border-2 min-h-[44px]"
                 data-testid="button-hero-cta-secondary"
               >
                 {t("hero_cta_secondary")}

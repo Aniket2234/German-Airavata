@@ -70,20 +70,20 @@ export function Services() {
   ];
 
   return (
-    <section id="services" ref={sectionRef} className="relative py-24 lg:py-32 bg-background">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="services" ref={sectionRef} className="relative py-16 sm:py-20 md:py-24 lg:py-32 bg-background">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground dark:text-white mb-4 bg-gradient-to-r from-[hsl(var(--cyber-green))] via-foreground to-[hsl(var(--electric-blue))] bg-clip-text text-transparent animate-gradient-shift">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground dark:text-white mb-3 sm:mb-4 bg-gradient-to-r from-[hsl(var(--cyber-green))] via-foreground to-[hsl(var(--electric-blue))] bg-clip-text text-transparent animate-gradient-shift px-4">
             {t("services_title")}
           </h2>
-          <p className="text-xl text-muted-foreground dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground dark:text-gray-300 max-w-3xl mx-auto px-4">
             {t("services_subtitle")}
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
             const isVisible = visibleCards.has(index);
@@ -93,7 +93,7 @@ export function Services() {
                 key={index}
                 data-service-card
                 data-testid={`service-card-${index}`}
-                className={`group relative bg-card border border-card-border rounded-lg p-8 hover-elevate transition-all duration-500 ${
+                className={`group relative bg-card border border-card-border rounded-lg p-6 sm:p-8 hover-elevate transition-all duration-500 touch-manipulation ${
                   isVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8"
@@ -110,12 +110,12 @@ export function Services() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-semibold text-foreground dark:text-white mb-4 group-hover:text-[hsl(var(--cyber-green))] transition-colors duration-300">
+                <h3 className="text-xl sm:text-2xl font-semibold text-foreground dark:text-white mb-3 sm:mb-4 group-hover:text-[hsl(var(--cyber-green))] transition-colors duration-300">
                   {t(service.titleKey)}
                 </h3>
 
                 {/* Description */}
-                <p className="text-base text-muted-foreground dark:text-gray-300 leading-relaxed mb-6">
+                <p className="text-sm sm:text-base text-muted-foreground dark:text-gray-300 leading-relaxed mb-4 sm:mb-6">
                   {t(service.descriptionKey)}
                 </p>
 

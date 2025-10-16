@@ -5,7 +5,7 @@ export function About() {
   const { t } = useLanguage();
 
   return (
-    <section id="about" className="relative py-24 lg:py-32 bg-muted/30">
+    <section id="about" className="relative py-16 sm:py-20 md:py-24 lg:py-32 bg-muted/30">
       {/* Subtle Grid Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div
@@ -18,27 +18,27 @@ export function About() {
         />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground dark:text-white mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground dark:text-white mb-3 sm:mb-4 px-4">
             {t("about_title")}
           </h2>
-          <p className="text-xl text-muted-foreground dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground dark:text-gray-300 max-w-3xl mx-auto px-4">
             {t("about_subtitle")}
           </p>
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-16 items-center">
           {/* Left Column - Description */}
-          <div className="space-y-8">
-            <p className="text-lg leading-relaxed text-foreground dark:text-gray-200">
+          <div className="space-y-6 sm:space-y-8">
+            <p className="text-base sm:text-lg leading-relaxed text-foreground dark:text-gray-200">
               {t("about_description")}
             </p>
 
             {/* Feature List */}
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               {[
                 { icon: CheckCircle2, key: "about_feature1" },
                 { icon: Users, key: "about_feature2" },
@@ -64,7 +64,7 @@ export function About() {
           </div>
 
           {/* Right Column - Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 gap-4 sm:gap-6">
             {[
               {
                 number: t("about_stat1_number"),
@@ -89,16 +89,16 @@ export function About() {
             ].map((stat, index) => (
               <div
                 key={index}
-                className="relative bg-card border border-card-border rounded-lg p-8 hover-elevate transition-all duration-300 group hover:scale-105"
+                className="relative bg-card border border-card-border rounded-lg p-4 sm:p-6 md:p-8 hover-elevate transition-all duration-300 group hover:scale-105 touch-manipulation"
                 data-testid={`stat-card-${index}`}
               >
-                <div className="space-y-2">
+                <div className="space-y-1 sm:space-y-2">
                   <div
-                    className={`text-5xl font-bold bg-gradient-to-br from-[hsl(var(--${stat.color}))] to-[hsl(var(--${stat.color}))]/60 bg-clip-text text-transparent`}
+                    className={`text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-br from-[hsl(var(--${stat.color}))] to-[hsl(var(--${stat.color}))]/60 bg-clip-text text-transparent`}
                   >
                     {stat.number}
                   </div>
-                  <div className="text-sm font-medium text-foreground dark:text-gray-400 uppercase tracking-wide">
+                  <div className="text-xs sm:text-sm font-medium text-foreground dark:text-gray-400 uppercase tracking-wide">
                     {stat.label}
                   </div>
                 </div>
