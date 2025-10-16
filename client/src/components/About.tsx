@@ -21,10 +21,10 @@ export function About() {
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground dark:text-white mb-4">
             {t("about_title")}
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground dark:text-gray-300 max-w-3xl mx-auto">
             {t("about_subtitle")}
           </p>
         </div>
@@ -33,7 +33,7 @@ export function About() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Description */}
           <div className="space-y-8">
-            <p className="text-lg leading-relaxed text-foreground/90">
+            <p className="text-lg leading-relaxed text-foreground dark:text-gray-200">
               {t("about_description")}
             </p>
 
@@ -51,10 +51,10 @@ export function About() {
                     key={index}
                     className="flex items-start gap-4 group hover-elevate rounded-md p-3 transition-all duration-300"
                   >
-                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[hsl(var(--cyber-green))]/10 border border-[hsl(var(--cyber-green))]/20 flex items-center justify-center group-hover:bg-[hsl(var(--cyber-green))]/20 transition-all duration-300">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[hsl(var(--cyber-green))]/10 border border-[hsl(var(--cyber-green))]/20 flex items-center justify-center group-hover:bg-[hsl(var(--cyber-green))]/20 transition-all duration-300 group-hover:scale-110">
                       <Icon className="h-5 w-5 text-[hsl(var(--cyber-green))]" />
                     </div>
-                    <p className="text-base text-foreground/90 pt-2">
+                    <p className="text-base text-foreground dark:text-gray-200 pt-2">
                       {t(item.key)}
                     </p>
                   </div>
@@ -89,7 +89,7 @@ export function About() {
             ].map((stat, index) => (
               <div
                 key={index}
-                className="relative bg-card border border-card-border rounded-lg p-8 hover-elevate transition-all duration-300 group"
+                className="relative bg-card border border-card-border rounded-lg p-8 hover-elevate transition-all duration-300 group hover:scale-105"
                 data-testid={`stat-card-${index}`}
               >
                 <div className="space-y-2">
@@ -98,7 +98,7 @@ export function About() {
                   >
                     {stat.number}
                   </div>
-                  <div className="text-sm font-medium text-muted-foreground uppercase tracking-wide">
+                  <div className="text-sm font-medium text-foreground dark:text-gray-400 uppercase tracking-wide">
                     {stat.label}
                   </div>
                 </div>

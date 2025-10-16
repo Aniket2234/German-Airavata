@@ -54,13 +54,13 @@ export function Footer() {
                 </button>
               </li>
               <li>
-                <a
-                  href="#products"
+                <button
+                  onClick={() => scrollToSection("products")}
                   className="text-sm text-muted-foreground hover:text-[hsl(var(--cyber-green))] transition-all duration-300 hover:translate-x-1"
                   data-testid="link-footer-products"
                 >
                   {t("footer_company_products")}
-                </a>
+                </button>
               </li>
             </ul>
           </div>

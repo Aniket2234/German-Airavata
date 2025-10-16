@@ -43,12 +43,12 @@ export function Header() {
           {/* Logo */}
           <button
             onClick={() => scrollToSection("home")}
-            className="flex items-center gap-2 hover-elevate rounded-md px-3 py-2 transition-all duration-300"
+            className="flex items-center gap-2 hover-elevate rounded-md px-3 py-2 transition-all duration-300 group"
             data-testid="link-home"
           >
             <div className="text-2xl font-bold font-mono tracking-tight">
-              <span className="text-primary">AIRAVATA</span>{" "}
-              <span className="text-foreground">TECH</span>
+              <span className="bg-gradient-to-r from-[hsl(var(--cyber-green))] via-[hsl(var(--electric-blue))] to-[hsl(var(--cyber-green))] bg-clip-text text-transparent animate-gradient-shift">AIRAVATA</span>{" "}
+              <span className="text-foreground dark:text-white">TECH</span>
             </div>
           </button>
 
@@ -57,7 +57,7 @@ export function Header() {
             <Button
               variant="ghost"
               onClick={() => scrollToSection("home")}
-              className="text-base"
+              className="text-base text-foreground dark:text-white hover:text-[hsl(var(--cyber-green))] transition-all duration-300"
               data-testid="button-nav-home"
             >
               {t("nav_home")}
@@ -65,7 +65,7 @@ export function Header() {
             <Button
               variant="ghost"
               onClick={() => scrollToSection("about")}
-              className="text-base"
+              className="text-base text-foreground dark:text-white hover:text-[hsl(var(--cyber-green))] transition-all duration-300"
               data-testid="button-nav-about"
             >
               {t("nav_about")}
@@ -73,7 +73,7 @@ export function Header() {
             <Button
               variant="ghost"
               onClick={() => scrollToSection("contact")}
-              className="text-base"
+              className="text-base text-foreground dark:text-white hover:text-[hsl(var(--cyber-green))] transition-all duration-300"
               data-testid="button-nav-contact"
             >
               {t("nav_contact")}

@@ -54,24 +54,24 @@ export function Hero() {
           {/* Left Column - Text Content */}
           <div className="lg:col-span-3 space-y-8 animate-fade-in">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/50 border border-border/50 backdrop-blur-sm">
-              <Sparkles className="h-4 w-4 text-[hsl(var(--cyber-green))]" />
-              <span className="text-sm font-medium text-muted-foreground">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/50 border border-border/50 backdrop-blur-sm animate-pulse-glow">
+              <Sparkles className="h-4 w-4 text-[hsl(var(--cyber-green))] animate-pulse" />
+              <span className="text-sm font-medium text-foreground dark:text-white">
                 {t("hero_subtitle")}
               </span>
             </div>
 
             {/* Main Headline */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
-              <span className="text-foreground">{t("hero_title")}</span>
+              <span className="text-foreground dark:text-white">{t("hero_title")}</span>
               <br />
-              <span className="bg-gradient-to-r from-primary via-[hsl(var(--electric-blue))] to-[hsl(var(--cyber-green))] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[hsl(var(--cyber-green))] via-[hsl(var(--electric-blue))] to-[hsl(var(--cyber-green))] bg-clip-text text-transparent animate-gradient-shift">
                 {t("hero_subtitle")}
               </span>
             </h1>
 
             {/* Description */}
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
+            <p className="text-lg md:text-xl text-muted-foreground dark:text-gray-300 leading-relaxed max-w-2xl">
               {t("hero_description")}
             </p>
 
@@ -102,21 +102,21 @@ export function Hero() {
           <div className="lg:col-span-2 hidden lg:block">
             <div className="relative">
               {/* Floating Tech Card */}
-              <div className="relative bg-card/40 backdrop-blur-md border border-border/50 rounded-lg p-8 shadow-2xl transform hover:scale-105 transition-all duration-500">
+              <div className="relative bg-card/40 backdrop-blur-md border border-border/50 rounded-lg p-8 shadow-2xl transform hover:scale-105 transition-all duration-500 animate-float">
                 <div className="space-y-6">
                   {/* Animated Code Lines */}
                   <div className="space-y-3 font-mono text-sm">
                     <div className="flex items-center gap-2 opacity-80">
-                      <div className="w-2 h-2 rounded-full bg-[hsl(var(--cyber-green))]" />
-                      <span className="text-muted-foreground">const innovation = () =&gt; {`{`}</span>
+                      <div className="w-2 h-2 rounded-full bg-[hsl(var(--cyber-green))] animate-pulse" />
+                      <span className="text-foreground dark:text-gray-200">const innovation = () =&gt; {`{`}</span>
                     </div>
                     <div className="flex items-center gap-2 pl-6 opacity-80">
-                      <div className="w-2 h-2 rounded-full bg-[hsl(var(--electric-blue))]" />
-                      <span className="text-muted-foreground">return excellence;</span>
+                      <div className="w-2 h-2 rounded-full bg-[hsl(var(--electric-blue))] animate-pulse" style={{ animationDelay: '0.2s' }} />
+                      <span className="text-foreground dark:text-gray-200">return excellence;</span>
                     </div>
                     <div className="flex items-center gap-2 opacity-80">
-                      <div className="w-2 h-2 rounded-full bg-primary" />
-                      <span className="text-muted-foreground">{`}`}</span>
+                      <div className="w-2 h-2 rounded-full bg-primary animate-pulse" style={{ animationDelay: '0.4s' }} />
+                      <span className="text-foreground dark:text-gray-200">{`}`}</span>
                     </div>
                   </div>
 
@@ -124,17 +124,17 @@ export function Hero() {
                   <div className="grid grid-cols-2 gap-4 pt-4 border-t border-border/30">
                     <div>
                       <div className="text-2xl font-bold text-[hsl(var(--cyber-green))]">100+</div>
-                      <div className="text-xs text-muted-foreground">Projects</div>
+                      <div className="text-xs text-foreground dark:text-gray-400">Projects</div>
                     </div>
                     <div>
                       <div className="text-2xl font-bold text-[hsl(var(--electric-blue))]">24/7</div>
-                      <div className="text-xs text-muted-foreground">Support</div>
+                      <div className="text-xs text-foreground dark:text-gray-400">Support</div>
                     </div>
                   </div>
                 </div>
 
                 {/* Glowing Effect */}
-                <div className="absolute -inset-px bg-gradient-to-r from-[hsl(var(--cyber-green))]/20 via-[hsl(var(--electric-blue))]/20 to-primary/20 rounded-lg blur-lg -z-10 animate-pulse" />
+                <div className="absolute -inset-px bg-gradient-to-r from-[hsl(var(--cyber-green))]/20 via-[hsl(var(--electric-blue))]/20 to-[hsl(var(--cyber-green))]/20 rounded-lg blur-lg -z-10 animate-gradient-shift" />
               </div>
             </div>
           </div>

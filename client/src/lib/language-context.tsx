@@ -76,6 +76,24 @@ const translations = {
     service_cta_description: "Haben Sie eine individuelle Anforderung? Kontaktieren Sie uns für eine maßgeschneiderte Lösung.",
     service_cta_button: "Kontakt aufnehmen",
     
+    products_badge: "Unsere Produkte",
+    products_title: "Erstklassige Softwareprodukte",
+    products_subtitle: "Professionelle, sofort einsatzbereite Lösungen für Ihr Unternehmen",
+    
+    product1_title: "CRM Pro Suite",
+    product1_description: "Vollständiges Customer Relationship Management System mit KI-gestützten Insights und Automatisierung.",
+    product1_price: "Ab €299/Monat",
+    
+    product2_title: "Analytics Dashboard",
+    product2_description: "Umfassende Datenanalyse-Plattform mit Echtzeit-Berichten und prädiktiven Modellen.",
+    product2_price: "Ab €199/Monat",
+    
+    product3_title: "Enterprise Security",
+    product3_description: "Komplette Cybersecurity-Lösung mit Bedrohungserkennung und 24/7 Überwachung.",
+    product3_price: "Ab €499/Monat",
+    
+    product_cta: "Anfragen",
+    
     footer_privacy: "Datenschutz",
     footer_terms: "AGB",
   },
@@ -145,6 +163,24 @@ const translations = {
     service_cta_title: "Your Project",
     service_cta_description: "Have a custom requirement? Contact us for a tailored solution.",
     service_cta_button: "Get in touch",
+    
+    products_badge: "Our Products",
+    products_title: "Premium Software Products",
+    products_subtitle: "Professional, ready-to-use solutions for your business",
+    
+    product1_title: "CRM Pro Suite",
+    product1_description: "Complete Customer Relationship Management system with AI-powered insights and automation.",
+    product1_price: "From €299/month",
+    
+    product2_title: "Analytics Dashboard",
+    product2_description: "Comprehensive data analysis platform with real-time reports and predictive models.",
+    product2_price: "From €199/month",
+    
+    product3_title: "Enterprise Security",
+    product3_description: "Complete cybersecurity solution with threat detection and 24/7 monitoring.",
+    product3_price: "From €499/month",
+    
+    product_cta: "Inquire",
     
     footer_privacy: "Privacy",
     footer_terms: "Terms",

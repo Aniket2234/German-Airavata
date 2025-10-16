@@ -74,10 +74,10 @@ export function Services() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground dark:text-white mb-4 bg-gradient-to-r from-[hsl(var(--cyber-green))] via-foreground to-[hsl(var(--electric-blue))] bg-clip-text text-transparent animate-gradient-shift">
             {t("services_title")}
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground dark:text-gray-300 max-w-3xl mx-auto">
             {t("services_subtitle")}
           </p>
         </div>
@@ -110,12 +110,12 @@ export function Services() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-semibold text-foreground mb-4 group-hover:text-[hsl(var(--cyber-green))] transition-colors duration-300">
+                <h3 className="text-2xl font-semibold text-foreground dark:text-white mb-4 group-hover:text-[hsl(var(--cyber-green))] transition-colors duration-300">
                   {t(service.titleKey)}
                 </h3>
 
                 {/* Description */}
-                <p className="text-base text-muted-foreground leading-relaxed mb-6">
+                <p className="text-base text-muted-foreground dark:text-gray-300 leading-relaxed mb-6">
                   {t(service.descriptionKey)}
                 </p>
 
@@ -146,11 +146,11 @@ export function Services() {
             data-testid="service-card-cta"
           >
             <div className="space-y-4">
-              <div className="text-4xl">💡</div>
-              <h3 className="text-xl font-semibold text-foreground">
+              <div className="text-4xl animate-pulse">💡</div>
+              <h3 className="text-xl font-semibold text-foreground dark:text-white">
                 {t("service_cta_title")}
               </h3>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-muted-foreground dark:text-gray-300">
                 {t("service_cta_description")}
               </p>
               <button
